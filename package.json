@@ -1,0 +1,19 @@
+{
+  "name": "devduo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "dotenv -e .env nodemon src/server/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv-cli": "^11.0.0",
+    "express": "^5.2.1",
+    "mongoose": "^9.7.4",
+    "nodemon": "^3.1.14",
+    "validator": "^13.15.35"
+  }
+}
