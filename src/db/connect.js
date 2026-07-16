@@ -4,7 +4,7 @@ export const connectToDB = async () => {
     console.log('Connecting to the MongoDB Database');
     
     try {
-        // await mongoose.connect(process.env.DB_ENDPOINT);
+        await mongoose.connect(process.env.DB_ENDPOINT);
         console.log('Database is connected successfully');
         return mongoose;
     } catch (error) {
