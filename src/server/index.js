@@ -8,6 +8,10 @@ import { configurePassport } from '../middlewares/sso.js';
 import { homeRouter } from '../routers/home.js';
 
 const app = express();
+app.use((req, res, next) => {
+    console.log('Incoming request req.user', req.user);
+    next();
+})
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

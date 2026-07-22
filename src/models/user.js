@@ -10,6 +10,15 @@ const userSchema = new mongoose.Schema({
         },
         unique: true
     },
+    email: {
+        type: 'string',
+        validate: {
+            validator: function(v) { return validator.isEmail(v)
+            },
+            message: (props) => `${props.value} is not a valid email`
+        },
+        unique: true
+    },
     name: {
         type: 'string',
         validate: {
@@ -22,7 +31,7 @@ const userSchema = new mongoose.Schema({
     photo: {
         type: 'string'
     },
-    googleId: {
+    authId: {
         type: 'string'
     },
     emailVerified: {
